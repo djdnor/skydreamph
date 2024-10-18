@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyDream Merch | Log In</title>
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Amatic SC', cursive
+            font-weight: 300;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #C7FFD8;
+        }
+
+        h2, p {
+            color: #003C43;
+            font-size: 20px;
+            text-transform: none;
+            letter-spacing: 1px;
+            font-weight: 300;
+            font-style: normal;
+            text-align: center;
+            cursor: default;
+        }
+
+        .left-section p {
+            color: #ffffffe2;
+            font-size: 20px;
+            letter-spacing: -1px;
+            text-transform: none;
+            font-weight: 300;
+            font-style: normal;
+            text-align: center;
+            cursor: default;
+        }
+
+        .right-section p {
+            color: #8f8f8f;
+            font-size: 15px;
+            text-transform: none;
+            font-weight: 300;
+            font-style: normal;
+            text-align: center;
+            cursor: default;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 700px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .left-section {
+            flex: 1;
+            background-image: url('login1.gif');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right-section {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #E3FEF7;
+		}
+        form {
+            width: 100%;
+            max-width: 300px;
+        }
+        input[type="username"],
+        input[type="password"],
+        input[type="submit"] {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #E7FBE6;
+            border-radius: 5px;
+            font-family: inherit;
+            transition: border-color 1.5s;
+        }
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border: 1.5px solid #927375;
+            outline: none;
+            transition: background-color 1.5s;
+        }
+        input[type="submit"] {
+            background-color: #7CF5FF;
+            color: #fff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #98DED9;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="left-section">
+             
+        </div>
+        <div class="right-section">
+            <h2>Login</h2>
+            <form action="index.html" method="get">
+                <input type="username" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="submit" value="Log In">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+</html>

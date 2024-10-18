@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Dream Merch | Checkout Form</title>
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; 
+            margin: 0; 
+            font-family: 'Baloo 2', cursive;
+            background: #7EACB5;
+            background: url(bg5.gif) no-repeat center fixed; 
+            background-size: cover;
+        }
+
+        .form-container {
+            border: 1px solid #ccc; 
+            padding: 20px; 
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+            width: 300px; 
+            background: #F4F6FF;
+            text-align: center;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        a.button, button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #98DED9;
+            border: none;
+            font-weight: bold;
+            text-shadow: 1px 1px #F0F3FF;
+            font-size: 15px;
+            font-family: 'Amatic SC', cursive;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none; /* Remove underline for a */
+        }
+
+        a.button:hover, button:hover {
+            background-color: #E9EFEC;
+        }
+    </style>
+    <script>
+        function toggleAccountNumberInput(paymentMethod) {
+            const gcashInput = document.getElementById('gcashAccount');
+            const mayaInput = document.getElementById('mayaAccount');
+
+            if (paymentMethod === 'gcash') {
+                gcashInput.classList.remove('hidden');
+                mayaInput.classList.add('hidden');
+            } else if (paymentMethod === 'maya') {
+                mayaInput.classList.remove('hidden');
+                gcashInput.classList.add('hidden');
+            } else {
+                gcashInput.classList.add('hidden');
+                mayaInput.classList.add('hidden');
+            }
+        }
+
+        function validateForm(event) {
+            const name = document.getElementById('name').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const payment = document.querySelector('input[name="payment"]:checked');
+
+            if (!name || !address || !payment) {
+                alert('Please fill out all fields and select a payment method.');
+                event.preventDefault(); // Prevent form submission
+                return false;
+            }
+
+            // Check if GCash or Maya is selected and account number is filled
+            if ((payment.value === 'gcash' && !document.getElementById('gcashNumber').value) ||
+                (payment.value === 'maya' && !document.getElementById('mayaNumber').value)) {
+                alert('Please provide the account number for the selected payment method.');
+                event.preventDefault(); // Prevent form submission
+                return false;
+            }
+
+            return true; // Allow form submission if all checks are passed
+        }
+    </script>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Infomation Form</h1>
+        <form id="checkoutForm" action="ty1.html" method="get" onsubmit="return validateForm(event);"> 
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required><br><br>
+
+            <p>Payment Method:</p>
+            <input type="radio" id="cod" name="payment" value="cod" onclick="toggleAccountNumberInput('cod')" required>
+            <label for="cod">Cash on Delivery</label><br>
+            <input type="radio" id="gcash" name="payment" value="gcash" onclick="toggleAccountNumberInput('gcash')" required>
+            <label for="gcash">GCash</label><br>
+            <input type="radio" id="maya" name="payment" value="maya" onclick="toggleAccountNumberInput('maya')" required>
+            <label for="maya">Maya</label><br><br>
+
+            <div id="gcashAccount" class="hidden">
+                <label for="gcashNumber">GCash Account Number:</label>
+                <input type="text" id="gcashNumber" name="gcashNumber"><br><br>
+            </div>
+
+            <div id="mayaAccount" class="hidden">
+                <label for="mayaNumber">Maya Account Number:</label>
+                <input type="text" id="mayaNumber" name="mayaNumber"><br><br>
+            </div>
+
+            <button type="submit">Proceed to Checkout</button>
+        </form>
+    </div>
+
+</body>
+</html>

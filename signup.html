@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyDream Merch | Sign Up</title>
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300&display=swap">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Playfair Display", serif;
+            font-weight: 300;
+            font-style: normal;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #F8F7F2;
+        }
+
+        h2 {
+            color: black; /* Ensure heading is black */
+            font-size: 20px;
+            text-transform: none;
+            letter-spacing: 1px;
+            font-weight: 300;
+            font-style: normal;
+            text-align: center;
+            cursor: default;
+        }
+
+        .right-section p {
+            color: black; /* Set paragraph text to black */
+            font-size: 15px;
+            text-transform: none;
+            font-weight: 300;
+            font-style: normal;
+            text-align: center;
+            cursor: default;
+        }
+
+        .signup-container {
+            width: 100%;
+            max-width: 700px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .left-section {
+            flex: 1;
+            background-image: url('signup1.gif');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .right-section {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #F7B5CA;
+            color: black; /* Set default text color for all elements */
+        }
+
+        form {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        input[type="email"],
+        input[type="password"],
+        input[type="text"],
+        input[type="submit"] {
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: inherit;
+            color: black; /* Text inside the input fields should be black */
+            transition: border-color 1.5s;
+        }
+
+        input[type="submit"] {
+            background-color: #E4B8BB;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        input[type="text"]:focus,
+        input[type="submit"]:hover {
+            border: 1.5px solid #927375;
+            outline: none;
+        }
+
+        .signup-link a {
+            margin-top: 15px;
+            color: #E4B8BB;
+            text-decoration: none;
+        }
+
+        .signup-link a:hover {
+            color: #e4b8bb44;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <div class="left-section">
+ 
+        </div>
+        <div class="right-section">
+            <h2>Sign up</h2>
+            <form action="index.html" method="get">
+                <input type="text" name="fname" placeholder="Username" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                
+                <input type="submit" value="Sign up">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

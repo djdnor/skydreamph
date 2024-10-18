@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyDream Merch</title>
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Baloo 2', cursive;
+            font-weight: bold;
+            text-shadow: 1px 2px #F0F3FF;
+            font-size: 30px;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            position: relative;
+            flex-direction: column;
+            padding: 20px; /* Add padding for better spacing */
+        }
+
+        .home {
+            background: url(bg0.gif);
+            background-size: cover; 
+        }
+        
+        .about {
+            background: #96E9C6;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        .about p {
+            font-size: 25px;
+        }
+
+        .shop {
+            background: url(bg1.gif);
+            background-size: cover; 
+        }
+
+        .contact {
+            background: #96CEB4;
+            text-align: center;
+            letter-spacing: 3px;
+        }
+
+        ul {
+            margin-top: 2px;
+            width: 100%;
+            padding: 0; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 25px;
+            background: transparent;
+            list-style-type: none; /* Remove list item dots */
+        }
+
+        li {
+            float: left;
+            margin-left: 10px;
+            position: relative; /* Needed for dropdown positioning */
+        }
+
+        li:last-child {
+            border-right: none;
+        }
+
+        li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #E7FBE6;
+        }
+
+        .cart-icon {
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+        }
+
+        .acct-icon {
+            width: 50px;
+            height: 50px;
+            vertical-align: middle;
+        }
+
+        img.sm {
+            position: relative;
+            left: 50px;
+            height: 200px;
+            width: 1100px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            position: relative;
+            left: 530px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;	
+        }
+
+        img.social-icon {
+            width: 30px; 
+            height: 30px;
+            vertical-align: middle; 
+            margin-right: 10px;
+        }
+
+        .shop-items {
+            display: flex;
+            justify-content: center;
+            gap: 150px;
+            padding-bottom: 30px;
+        }
+
+        .shop-item {
+            text-align: center;
+            padding-top: 15px;
+            padding: 30px;
+            background: #FEF9F2;
+            border-radius: 30px;
+        }
+
+        .shop-item img {
+            width: 230px; 
+            height: 230px; 
+            object-fit: cover;  
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        .shop-item button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #98DED9;
+            border: none;
+            font-weight: bold;
+            text-shadow: 1px 1px #F0F3FF;
+            font-size: 20px;
+            font-family: 'Amatic SC', cursive;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .shop-item button:hover {
+            background-color: #E9EFEC;
+        }
+
+        /* Dropdown styles */
+        .dropdown {
+            display: none; 
+            position: absolute; 
+            background-color: #F0F3FF; 
+            min-width: 160px; 
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); 
+            z-index: 1; 
+			font-size: 20px;
+        }
+
+        li:hover .dropdown {
+            display: block; /* Show dropdown on hover */
+        }
+
+        .dropdown a {
+            color: black; /* Text color for dropdown links */
+            padding: 12px 16px; /* Padding for dropdown items */
+            text-decoration: none; /* Remove underline */
+            display: block; /* Block display for the items */
+        }
+
+        .dropdown a:hover {
+            background-color: #E7FBE6; /* Background color on hover */
+        }
+    </style>
+</head>
+<body>
+<section id="home" class="home">
+    <ul>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#shop">SHOP</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li style="float:right; position: relative;">
+            <a href="#"><img src="account.png" alt="Account Icon" class="acct-icon"></a>
+            <div class="dropdown">
+                <a href="login.html">Log In</a>
+                <a href="signup.html">Sign Up</a>
+            </div>
+        </li>
+        <li style="float:right"><a onclick="window.location.href='cart.html'"><img src="cart.png" alt="Cart Icon" class="cart-icon"></a></li>
+    </ul>
+
+    <img class="sm" src="sm.png" alt="shop name">
+</section>
+
+<section id="about" class="about">
+    <h1>ABOUT US</h1>
+    <p>Welcome to SkyDream Merch! We are passionate about providing high-quality merchandise for K-pop fans.
+    Our unique shopping experience reflects your love for your favorite artists, offering stylish apparel, eye-catching accessories, 
+    and exclusive collectibles. Each item is carefully curated to capture the vibrant spirit of K-pop, 
+    ensuring you find something special. Join our community of dedicated fans and express your fandom in style.
+    Thank you for choosing SkyDream Merch—where your dreams take flight!</p>
+</section>
+
+<section id="shop" class="shop">
+    <div class="shop-items">
+        <div class="shop-item">
+            <h2>Album</h2>
+            <img src="a1.png" alt="Item 1"><br>
+            <button onclick="window.location.href='albums.html'">SHOP HERE!!</button>
+        </div>
+        <div class="shop-item">
+            <h2>Light Stick</h2>
+            <img src="ls1.png" alt="Item 2"><br>
+            <button onclick="window.location.href='lstick.html'">SHOP HERE!!</button>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h1>CONTACT US</h1>
+    <table>
+        <tbody>
+            <tr>
+                <td><img src="tiktok.png" alt="TikTok Icon" class="social-icon">   @SkyDreamPh</td>
+            </tr>
+            <tr>
+                <td><img src="instagram.png" alt="Instagram Icon" class="social-icon">   @SkyDreamPh</td>
+            </tr>
+            <tr>
+                <td><img src="facebook.png" alt="Facebook Icon" class="social-icon">   SkyDream Merch Shop</td>
+            </tr>
+            <tr>
+                <td><img src="x.png" alt="X Icon" class="social-icon">   @SkyDreamPh</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+</body>
+</html>
